@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = [
+  {
+    slug: 'spring-restoration-2026',
+    title: 'Spring Restoration Season Kicks Off Along Big Cottonwood Creek',
+    date: 'February 28, 2026',
+    excerpt: 'Our largest restoration project of the year begins this March, with over 200 volunteers signed up to help restore 3 miles of streambank habitat.',
+    category: 'Conservation',
+  },
+  {
+    slug: 'cutthroat-trout-recovery',
+    title: 'Bonneville Cutthroat Trout Population Reaches 10-Year High',
+    date: 'February 15, 2026',
+    excerpt: 'Latest population surveys show a 34% increase in Bonneville cutthroat trout numbers in monitored streams, a direct result of habitat restoration efforts.',
+    category: 'Research',
+  },
+  {
+    slug: 'jr-ranger-expansion',
+    title: 'Jr. Ranger Program Expands to 15 New Schools',
+    date: 'January 20, 2026',
+    excerpt: 'Our flagship youth education program will reach an additional 2,000 students this year through new partnerships with schools across the Wasatch Front.',
+    category: 'Education',
+  },
+  {
+    slug: 'annual-report-2025',
+    title: '2025 Annual Report: A Year of Record Impact',
+    date: 'January 5, 2026',
+    excerpt: 'We protected more acres, engaged more volunteers, and educated more students than any previous year. Read the full report on our accomplishments.',
+    category: 'Report',
+  },
+  {
+    slug: 'winter-wildlife-survey',
+    title: 'Winter Wildlife Survey Reveals Healthy Moose Population',
+    date: 'December 12, 2025',
+    excerpt: 'Aerial and ground surveys across the central Wasatch confirm stable moose populations, with several new calves spotted in Little Cottonwood Canyon.',
+    category: 'Research',
+  },
+  {
+    slug: 'gala-fundraiser-recap',
+    title: 'Annual Gala Raises Record $180,000 for Conservation',
+    date: 'November 18, 2025',
+    excerpt: 'Our 2025 gala brought together 300 supporters and raised a record amount for habitat restoration and education programs in the coming year.',
+    category: 'Fundraiser',
+  },
+];
+
+const categoryColors: Record<string, string> = {
+  'Conservation': 'bg-forest-100 text-forest-700',
+  'Research': 'bg-blue-100 text-blue-700',
+  'Education': 'bg-amber-100 text-amber-700',
+  'Report': 'bg-stone-100 text-stone-700',
+  'Fundraiser': 'bg-rose-100 text-rose-700',
+};
+---
+
+<BaseLayout
+  title="News | Wasatch Wildlife Alliance"
+  description="Latest news, research updates, and stories from Wasatch Wildlife Alliance's conservation work across Utah's Wasatch Range."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-forest-900 via-forest-800 to-forest-950 text-white hero-pattern">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 relative z-10">
+      <div class="max-w-3xl">
+        <span class="section-label text-amber-400 mb-4 block">Latest Updates</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-6">
+          News & Stories
+        </h1>
+        <p class="text-lg text-white/70 leading-relaxed">
+          Stay up to date with our conservation projects, research findings, and community impact stories.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Grid -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="space-y-6 reveal">
+        {posts.map(post => (
+          <a href={`/news/${post.slug}/`} class="news-card block group">
+            <div class="p-6 md:p-8">
+              <div class="flex flex-wrap items-center gap-3 mb-3">
+                <span class:list={["text-xs font-semibold px-2.5 py-1 rounded-full", categoryColors[post.category] || 'bg-stone-100 text-stone-600']}>
+                  {post.category}
+                </span>
+                <span class="text-stone-400 text-sm">{post.date}</span>
+              </div>
+              <h2 class="font-bold text-stone-900 text-xl mb-3 group-hover:text-forest-700 transition-colors">
+                {post.title}
+              </h2>
+              <p class="text-stone-600 text-sm leading-relaxed">{post.excerpt}</p>
+              <span class="inline-flex items-center gap-1.5 text-forest-600 font-semibold text-sm mt-4 group-hover:gap-2.5 transition-all">
+                Read More
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="h-16 lg:hidden"></div>
+</BaseLayout>

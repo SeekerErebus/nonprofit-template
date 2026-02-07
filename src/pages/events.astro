@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const events = [
+  {
+    date: 'March 15, 2026',
+    day: '15',
+    month: 'Mar',
+    title: 'Spring Creek Cleanup',
+    location: 'Big Cottonwood Canyon',
+    time: '9:00 AM - 1:00 PM',
+    description: 'Join us for our annual spring cleanup along Big Cottonwood Creek. We\'ll be removing litter, invasive plants, and restoring streambank areas. All supplies and gloves provided. Family-friendly event with refreshments.',
+    category: 'Volunteer',
+  },
+  {
+    date: 'March 22, 2026',
+    day: '22',
+    month: 'Mar',
+    title: 'Raptor Watch Guided Hike',
+    location: 'Ensign Peak Trailhead',
+    time: '7:30 AM - 11:00 AM',
+    description: 'Guided morning hike with our biologists to observe hawks, eagles, and falcons during spring migration. Binoculars provided. Moderate difficulty, 3-mile round trip. Limited to 25 participants.',
+    category: 'Education',
+  },
+  {
+    date: 'April 5, 2026',
+    day: '5',
+    month: 'Apr',
+    title: 'Native Plant Workshop',
+    location: 'Red Butte Garden',
+    time: '10:00 AM - 12:00 PM',
+    description: 'Learn about native Wasatch plants and how to incorporate them into your landscape to support local wildlife. Each participant takes home a free native seedling. Light refreshments provided.',
+    category: 'Education',
+  },
+  {
+    date: 'April 19, 2026',
+    day: '19',
+    month: 'Apr',
+    title: 'Earth Day Trail Restoration',
+    location: 'Millcreek Canyon',
+    time: '8:00 AM - 2:00 PM',
+    description: 'Celebrate Earth Day by helping restore eroded trails in Millcreek Canyon. We\'ll be rebuilding trail edges, installing water bars, and planting native groundcover. Tools and lunch provided.',
+    category: 'Volunteer',
+  },
+  {
+    date: 'May 3, 2026',
+    day: '3',
+    month: 'May',
+    title: 'Annual Gala & Fundraiser',
+    location: 'The Grand America Hotel, SLC',
+    time: '6:00 PM - 10:00 PM',
+    description: 'Our signature fundraising event featuring a keynote address by Dr. Jane Foster, silent auction, live music, and a celebration of the year\'s conservation achievements. Formal attire. Tickets: $150/person.',
+    category: 'Fundraiser',
+  },
+  {
+    date: 'May 17, 2026',
+    day: '17',
+    month: 'May',
+    title: 'Jr. Ranger Field Day',
+    location: 'Liberty Park, SLC',
+    time: '9:00 AM - 3:00 PM',
+    description: 'A fun-filled day for kids ages 6-14 featuring nature scavenger hunts, wildlife identification games, stream exploration, and arts & crafts. Free for all children. Parents welcome.',
+    category: 'Education',
+  },
+  {
+    date: 'June 7, 2026',
+    day: '7',
+    month: 'Jun',
+    title: 'Cutthroat Trout Stream Survey',
+    location: 'Little Cottonwood Canyon',
+    time: '7:00 AM - 12:00 PM',
+    description: 'Assist our biologists with the annual Bonneville cutthroat trout population survey. Training provided on-site. Must be comfortable wading in shallow water. Ages 16+.',
+    category: 'Volunteer',
+  },
+  {
+    date: 'June 21, 2026',
+    day: '21',
+    month: 'Jun',
+    title: 'Summer Solstice Night Hike',
+    location: 'Bonneville Shoreline Trail',
+    time: '7:30 PM - 10:00 PM',
+    description: 'A guided evening hike along the Bonneville Shoreline Trail to observe nocturnal wildlife and celebrate the longest day of the year. Learn about owls, bats, and night-blooming plants.',
+    category: 'Education',
+  },
+];
+
+const categoryColors: Record<string, string> = {
+  'Volunteer': 'bg-forest-100 text-forest-700',
+  'Education': 'bg-amber-100 text-amber-700',
+  'Fundraiser': 'bg-rose-100 text-rose-700',
+};
+---
+
+<BaseLayout
+  title="Events | Wasatch Wildlife Alliance"
+  description="Join Wasatch Wildlife Alliance for conservation events, volunteer days, educational workshops, and community gatherings across the Wasatch Range."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-forest-900 via-forest-800 to-forest-950 text-white hero-pattern">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 relative z-10">
+      <div class="max-w-3xl">
+        <span class="section-label text-amber-400 mb-4 block">Get Involved</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-6">
+          Upcoming Events
+        </h1>
+        <p class="text-lg text-white/70 leading-relaxed">
+          From creek cleanups to guided hikes, there's always a way to connect with nature and make a difference. All skill levels welcome.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events List -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="space-y-6 reveal">
+        {events.map(event => (
+          <div class="event-card flex flex-col md:flex-row">
+            <div class="bg-forest-50 px-6 py-5 md:px-8 md:py-6 flex md:flex-col items-center md:items-center justify-start gap-4 md:gap-1 md:min-w-[100px]">
+              <div class="text-center">
+                <div class="text-3xl md:text-4xl font-bold text-forest-800 leading-none">{event.day}</div>
+                <div class="text-sm font-semibold text-forest-600 uppercase">{event.month}</div>
+              </div>
+            </div>
+            <div class="px-6 py-5 flex-1">
+              <div class="flex flex-wrap items-center gap-3 mb-2">
+                <h3 class="font-bold text-stone-900 text-lg">{event.title}</h3>
+                <span class:list={["text-xs font-semibold px-2.5 py-1 rounded-full", categoryColors[event.category] || 'bg-stone-100 text-stone-600']}>
+                  {event.category}
+                </span>
+              </div>
+              <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm text-stone-500 mb-3">
+                <span class="flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
+                  {event.location}
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                  {event.time}
+                </span>
+              </div>
+              <p class="text-stone-600 text-sm leading-relaxed">{event.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Host an Event CTA -->
+  <section class="py-16 md:py-20 bg-earth-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center reveal">
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-stone-900 mb-4">Want to Host an Event?</h2>
+      <p class="text-stone-600 mb-8 max-w-xl mx-auto">
+        We partner with businesses, schools, and community groups for conservation events. Reach out to plan something together.
+      </p>
+      <a href="mailto:events@wasatchwildlife.org" class="btn-primary px-8 py-3">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+        </svg>
+        Contact Our Events Team
+      </a>
+    </div>
+  </section>
+
+  <div class="h-16 lg:hidden"></div>
+</BaseLayout>

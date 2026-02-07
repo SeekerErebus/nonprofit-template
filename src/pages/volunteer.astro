@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const opportunities = [
+  {
+    title: 'Trail & Habitat Restoration',
+    commitment: '4-8 hours/month',
+    description: 'Work alongside our conservation team to restore trails, plant native vegetation, and remove invasive species across the Wasatch.',
+    icon: 'tree',
+  },
+  {
+    title: 'Wildlife Monitoring',
+    commitment: '6-10 hours/month',
+    description: 'Assist biologists with population surveys, camera trap management, and data collection for key species. Training provided.',
+    icon: 'binoculars',
+  },
+  {
+    title: 'Education & Outreach',
+    commitment: '3-6 hours/month',
+    description: 'Help lead nature walks, school programs, and community workshops. Great for teachers, retirees, and anyone who loves sharing knowledge.',
+    icon: 'education',
+  },
+  {
+    title: 'Event Support',
+    commitment: 'As needed',
+    description: 'Help organize and run fundraising events, community cleanups, and public programs. Perfect for those with flexible schedules.',
+    icon: 'calendar',
+  },
+];
+---
+
+<BaseLayout
+  title="Volunteer | Wasatch Wildlife Alliance"
+  description="Join 1,200+ volunteers protecting Utah's wildlife. Sign up for habitat restoration, wildlife monitoring, education programs, and community events."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-forest-900 via-forest-800 to-forest-950 text-white hero-pattern">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 relative z-10">
+      <div class="max-w-3xl">
+        <span class="section-label text-amber-400 mb-4 block">Give Your Time</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-6">
+          Become a Volunteer
+        </h1>
+        <p class="text-lg text-white/70 leading-relaxed">
+          Join 1,200+ volunteers making a real difference for Utah's wildlife. No experience needed -- just a willingness to get outdoors and get involved.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opportunities -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14 reveal">
+        <span class="section-label text-forest-600 justify-center mb-4">Ways to Help</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-stone-900">Volunteer Opportunities</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 stagger-children reveal">
+        {opportunities.map(opp => (
+          <div class="program-card flex gap-5">
+            <div class="w-12 h-12 bg-forest-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              {opp.icon === 'tree' && (
+                <svg class="w-6 h-6 text-forest-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21" />
+                </svg>
+              )}
+              {opp.icon === 'binoculars' && (
+                <svg class="w-6 h-6 text-forest-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+              )}
+              {opp.icon === 'education' && (
+                <svg class="w-6 h-6 text-forest-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342" />
+                </svg>
+              )}
+              {opp.icon === 'calendar' && (
+                <svg class="w-6 h-6 text-forest-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                </svg>
+              )}
+            </div>
+            <div>
+              <h3 class="font-bold text-stone-900 text-lg mb-1">{opp.title}</h3>
+              <p class="text-forest-600 text-xs font-semibold mb-2">{opp.commitment}</p>
+              <p class="text-stone-600 text-sm leading-relaxed">{opp.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Signup Form -->
+  <section class="py-16 md:py-24 bg-earth-50" id="signup">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 reveal">
+        <span class="section-label text-forest-600 justify-center mb-4">Sign Up</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-stone-900 mb-4">Volunteer Application</h2>
+        <p class="text-stone-600">
+          Fill out the form below and our volunteer coordinator will reach out within 48 hours to schedule your orientation.
+        </p>
+      </div>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="bg-white rounded-2xl border border-stone-200 p-8 md:p-10 reveal">
+        <div class="grid sm:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label for="first-name" class="block text-sm font-semibold text-stone-700 mb-1.5">First Name *</label>
+            <input type="text" id="first-name" name="first_name" required class="form-input" placeholder="Jane" />
+          </div>
+          <div>
+            <label for="last-name" class="block text-sm font-semibold text-stone-700 mb-1.5">Last Name *</label>
+            <input type="text" id="last-name" name="last_name" required class="form-input" placeholder="Doe" />
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label for="email" class="block text-sm font-semibold text-stone-700 mb-1.5">Email *</label>
+            <input type="email" id="email" name="email" required class="form-input" placeholder="jane@example.com" />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-semibold text-stone-700 mb-1.5">Phone</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="(801) 555-1234" />
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <label for="interest" class="block text-sm font-semibold text-stone-700 mb-1.5">Area of Interest *</label>
+          <select id="interest" name="interest" required class="form-input">
+            <option value="">Select an area...</option>
+            <option value="trail-habitat">Trail & Habitat Restoration</option>
+            <option value="wildlife-monitoring">Wildlife Monitoring</option>
+            <option value="education">Education & Outreach</option>
+            <option value="events">Event Support</option>
+            <option value="any">Open to Anything</option>
+          </select>
+        </div>
+
+        <div class="mb-5">
+          <label for="experience" class="block text-sm font-semibold text-stone-700 mb-1.5">Relevant Experience (Optional)</label>
+          <textarea id="experience" name="experience" rows="4" class="form-input" placeholder="Tell us about any relevant skills, experience, or certifications..."></textarea>
+        </div>
+
+        <div class="mb-6">
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" name="age_confirm" required class="mt-1 w-4 h-4 text-forest-600 rounded border-stone-300 focus:ring-forest-500" />
+            <span class="text-sm text-stone-600">I confirm that I am 16 years of age or older (minors 12-15 may volunteer with a parent/guardian).</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary w-full py-3.5 text-lg">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+          </svg>
+          Submit Application
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center reveal">
+      <svg class="w-12 h-12 text-forest-200 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+      </svg>
+      <blockquote class="text-xl md:text-2xl text-stone-700 font-display italic leading-relaxed mb-6">
+        "Volunteering with WWA has been one of the most rewarding experiences of my life. There's nothing like seeing a restored habitat come alive with wildlife again."
+      </blockquote>
+      <div>
+        <p class="font-semibold text-stone-900">Rachel Simmons</p>
+        <p class="text-stone-500 text-sm">Volunteer since 2018</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="h-16 lg:hidden"></div>
+</BaseLayout>

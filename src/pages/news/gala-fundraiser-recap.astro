@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Annual Gala Recap | Wasatch Wildlife Alliance"
+  description="Our 2025 Annual Gala raised a record $180,000 for conservation programs, bringing together 300 supporters for an evening of celebration."
+>
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <a href="/news/" class="text-forest-600 hover:text-forest-800 font-semibold text-sm flex items-center gap-1.5 mb-8 transition-colors">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+        </svg>
+        Back to News
+      </a>
+
+      <span class="inline-block bg-rose-100 text-rose-700 text-xs font-semibold px-2.5 py-1 rounded-full mb-4">Fundraiser</span>
+      <h1 class="font-display text-3xl md:text-4xl font-bold text-stone-900 mb-4 leading-tight">
+        Annual Gala Raises Record $180,000 for Conservation
+      </h1>
+      <p class="text-stone-400 text-sm mb-8">November 18, 2025</p>
+
+      <div class="prose prose-stone max-w-none text-stone-700 leading-relaxed space-y-5">
+        <p>
+          Our 2025 Annual Conservation Gala was a resounding success, bringing together 300 supporters at The Grand America Hotel for an evening celebrating Utah's wild places and the people who protect them. The event raised a record $180,000 -- funds that will directly support habitat restoration, wildlife monitoring, and education programs in 2026.
+        </p>
+        <h2 class="font-display text-2xl font-bold text-stone-900 mt-8 mb-4">Evening Highlights</h2>
+        <p>
+          The evening featured a keynote address by Dr. Rebecca Torres, director of the Western Wildlife Corridor Initiative, who spoke about the critical role regional nonprofits play in national conservation strategy. Guests enjoyed a silent auction featuring donated outdoor experiences, local art, and adventure packages.
+        </p>
+        <p>
+          Executive Director Dr. Sarah Whitfield presented the year's conservation highlights, including the 15,000-acre protection milestone and the expansion of the Jr. Ranger program. "Every person in this room is part of this story," she said. "Conservation isn't something that happens to a community -- it happens because of a community."
+        </p>
+        <h2 class="font-display text-2xl font-bold text-stone-900 mt-8 mb-4">Thank You</h2>
+        <p>
+          We extend our heartfelt thanks to our event sponsors, silent auction donors, and every guest who attended and gave so generously. Your investment in conservation will pay dividends for years to come.
+        </p>
+        <p>
+          Couldn't attend this year? You can still make a difference by <a href="/donate/" class="text-forest-600 hover:text-forest-800 font-semibold underline">making a donation</a>. And save the date for next year's gala: <strong>May 3, 2026</strong>.
+        </p>
+      </div>
+
+      <div class="border-t border-stone-200 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-start gap-4">
+        <a href="/news/" class="text-forest-600 hover:text-forest-800 font-semibold text-sm flex items-center gap-1.5 transition-colors">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+          </svg>
+          All News
+        </a>
+        <a href="/donate/" class="btn-donate !py-2.5 !px-5 !text-sm">
+          Support Our Mission
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <div class="h-16 lg:hidden"></div>
+</BaseLayout>

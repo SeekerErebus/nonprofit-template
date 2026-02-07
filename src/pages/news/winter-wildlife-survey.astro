@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Winter Wildlife Survey Results | Wasatch Wildlife Alliance"
+  description="Aerial and ground surveys confirm stable moose populations across the central Wasatch, with new calves spotted in Little Cottonwood Canyon."
+>
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <a href="/news/" class="text-forest-600 hover:text-forest-800 font-semibold text-sm flex items-center gap-1.5 mb-8 transition-colors">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+        </svg>
+        Back to News
+      </a>
+
+      <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full mb-4">Research</span>
+      <h1 class="font-display text-3xl md:text-4xl font-bold text-stone-900 mb-4 leading-tight">
+        Winter Wildlife Survey Reveals Healthy Moose Population
+      </h1>
+      <p class="text-stone-400 text-sm mb-8">December 12, 2025</p>
+
+      <div class="prose prose-stone max-w-none text-stone-700 leading-relaxed space-y-5">
+        <p>
+          Our annual winter wildlife survey, conducted in partnership with the Utah Division of Wildlife Resources, has confirmed stable and healthy moose populations across the central Wasatch Range. The survey, which combines aerial flyovers with ground-based observation, counted 47 moose in our study area -- consistent with the 5-year average and including 8 calves born in 2025.
+        </p>
+        <p>
+          "Seeing calves is always encouraging," said Marcus Chen, our Director of Conservation. "It tells us the habitat is healthy enough to support reproduction and that our corridor protection efforts are making a difference."
+        </p>
+        <h2 class="font-display text-2xl font-bold text-stone-900 mt-8 mb-4">Beyond Moose</h2>
+        <p>
+          The winter survey also documented mule deer herds, elk, and several raptor species. Camera traps set across the study area captured images of a mountain lion and a pine marten -- both indicators of a healthy, diverse ecosystem.
+        </p>
+        <p>
+          This data feeds into our long-term monitoring database, which helps us track population trends, identify habitat threats, and prioritize conservation investments. You can support our monitoring program through a <a href="/donate/" class="text-forest-600 hover:text-forest-800 font-semibold underline">donation</a> or by <a href="/volunteer/" class="text-forest-600 hover:text-forest-800 font-semibold underline">volunteering</a> for our citizen science surveys.
+        </p>
+      </div>
+
+      <div class="border-t border-stone-200 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-start gap-4">
+        <a href="/news/" class="text-forest-600 hover:text-forest-800 font-semibold text-sm flex items-center gap-1.5 transition-colors">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+          </svg>
+          All News
+        </a>
+        <a href="/donate/" class="btn-donate !py-2.5 !px-5 !text-sm">
+          Fund Our Research
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <div class="h-16 lg:hidden"></div>
+</BaseLayout>

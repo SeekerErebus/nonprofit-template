@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const staff = [
+  {
+    name: 'Dr. Sarah Whitfield',
+    role: 'Executive Director',
+    bio: 'Former wildlife biologist with the U.S. Fish & Wildlife Service. 20+ years in conservation. PhD in Ecology from the University of Utah.',
+    initials: 'SW',
+  },
+  {
+    name: 'Marcus Chen',
+    role: 'Director of Conservation',
+    bio: 'Leads all habitat restoration and wildlife monitoring programs. Previously managed conservation projects in Montana and Idaho.',
+    initials: 'MC',
+  },
+  {
+    name: 'Elena Vasquez',
+    role: 'Education & Outreach Manager',
+    bio: 'Created the Jr. Ranger program. Former science teacher with a passion for connecting kids with nature.',
+    initials: 'EV',
+  },
+  {
+    name: 'James Redfoot',
+    role: 'Volunteer Coordinator',
+    bio: 'Manages our 1,200+ volunteer corps. Organizes all field events and community engagement programs.',
+    initials: 'JR',
+  },
+  {
+    name: 'Dr. Amy Tanaka',
+    role: 'Wildlife Biologist',
+    bio: 'Leads species monitoring and population surveys. Specializes in raptor ecology and native fish conservation.',
+    initials: 'AT',
+  },
+  {
+    name: 'David Morales',
+    role: 'Development Director',
+    bio: 'Oversees fundraising, grants, and donor relations. 15 years of nonprofit development experience.',
+    initials: 'DM',
+  },
+];
+
+const board = [
+  { name: 'Robert Hines', role: 'Board Chair', affiliation: 'Retired, Utah Division of Wildlife Resources' },
+  { name: 'Patricia Nakamura', role: 'Vice Chair', affiliation: 'Professor of Environmental Science, BYU' },
+  { name: 'Thomas Blackwood', role: 'Treasurer', affiliation: 'Partner, Wasatch Financial Group' },
+  { name: 'Maria Gonzalez', role: 'Secretary', affiliation: 'Attorney, Conservation Law Center' },
+  { name: 'Dr. Linda Cheng', role: 'Board Member', affiliation: 'Veterinarian, Hogle Zoo' },
+  { name: 'Frank Bearclaw', role: 'Board Member', affiliation: 'Tribal Liaison, Ute Indian Tribe' },
+  { name: 'Jennifer Larsen', role: 'Board Member', affiliation: 'CEO, Wasatch Outdoor Gear Co.' },
+];
+---
+
+<BaseLayout
+  title="Our Team | Wasatch Wildlife Alliance"
+  description="Meet the dedicated staff and board members who lead Wasatch Wildlife Alliance's conservation efforts across Utah's Wasatch Range."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-forest-900 via-forest-800 to-forest-950 text-white hero-pattern">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 relative z-10">
+      <div class="max-w-3xl">
+        <span class="section-label text-amber-400 mb-4 block">Our People</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-6">
+          Meet Our Team
+        </h1>
+        <p class="text-lg text-white/70 leading-relaxed">
+          Passionate conservationists, scientists, educators, and community leaders working together to protect Utah's wildlife.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Staff -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14 reveal">
+        <span class="section-label text-forest-600 justify-center mb-4">Leadership</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-stone-900">Our Staff</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children reveal">
+        {staff.map(person => (
+          <div class="team-card">
+            <div class="w-20 h-20 bg-gradient-to-br from-forest-500 to-forest-700 rounded-full flex items-center justify-center mx-auto mb-5">
+              <span class="text-white font-bold text-xl">{person.initials}</span>
+            </div>
+            <h3 class="font-bold text-stone-900 text-lg">{person.name}</h3>
+            <p class="text-forest-600 font-semibold text-sm mb-3">{person.role}</p>
+            <p class="text-stone-500 text-sm leading-relaxed">{person.bio}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Board -->
+  <section class="py-16 md:py-24 bg-earth-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14 reveal">
+        <span class="section-label text-forest-600 justify-center mb-4">Governance</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-stone-900">Board of Directors</h2>
+        <p class="text-stone-600 mt-4 max-w-2xl mx-auto">
+          Our board brings diverse expertise in ecology, finance, law, and community advocacy to guide our mission.
+        </p>
+      </div>
+      <div class="max-w-4xl mx-auto">
+        <div class="grid sm:grid-cols-2 gap-4 stagger-children reveal">
+          {board.map(member => (
+            <div class="bg-white rounded-xl border border-stone-200 p-5 flex items-start gap-4 hover:shadow-md transition-shadow">
+              <div class="w-11 h-11 bg-forest-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-forest-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-stone-900">{member.name}</h3>
+                <p class="text-forest-600 font-semibold text-sm">{member.role}</p>
+                <p class="text-stone-500 text-xs mt-1">{member.affiliation}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join CTA -->
+  <section class="py-16 md:py-20 bg-earth-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center reveal">
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-stone-900 mb-4">Join Our Team</h2>
+      <p class="text-stone-600 mb-8 max-w-xl mx-auto">
+        We're always looking for passionate people to join our volunteer corps or support our work.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/volunteer/" class="btn-primary px-8 py-3">Become a Volunteer</a>
+        <a href="/donate/" class="btn-donate px-8 py-3">Support Our Mission</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="h-16 lg:hidden"></div>
+</BaseLayout>

@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Donate | Wasatch Wildlife Alliance"
+  description="Support Wasatch Wildlife Alliance's conservation efforts. 92% of every dollar goes directly to protecting Utah's wildlife and natural habitats."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-forest-900 via-forest-800 to-forest-950 text-white hero-pattern">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 relative z-10">
+      <div class="max-w-3xl">
+        <span class="section-label text-amber-400 mb-4 block">Support Our Mission</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-6">
+          Make a Donation
+        </h1>
+        <p class="text-lg text-white/70 leading-relaxed">
+          Your generosity directly funds habitat restoration, wildlife monitoring, and environmental education across Utah's Wasatch Range.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Options -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14 reveal">
+        <span class="section-label text-forest-600 justify-center mb-4">Give Today</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-stone-900 mb-4">Choose Your Impact</h2>
+        <p class="text-stone-600 max-w-2xl mx-auto">
+          Every dollar makes a difference. 92 cents of every dollar goes directly to our conservation programs.
+        </p>
+      </div>
+
+      <!-- Donation Tiers -->
+      <div class="grid md:grid-cols-3 gap-6 mb-14 stagger-children reveal">
+        <div class="bg-earth-50 rounded-2xl border-2 border-forest-100 p-8 text-center hover:border-forest-300 transition-colors">
+          <div class="text-4xl font-display font-bold text-forest-700 mb-2">$25</div>
+          <h3 class="font-bold text-stone-900 text-lg mb-3">Seedling</h3>
+          <ul class="text-stone-600 text-sm space-y-2 mb-6 text-left">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              Plants 10 native trees
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              Newsletter updates
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              Digital thank-you certificate
+            </li>
+          </ul>
+          <a href="#donate-form" class="btn-primary w-full py-3">Give $25</a>
+        </div>
+
+        <div class="bg-forest-50 rounded-2xl border-2 border-forest-400 p-8 text-center relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-forest-600 text-white text-xs font-bold px-4 py-1 rounded-full">Most Popular</div>
+          <div class="text-4xl font-display font-bold text-forest-700 mb-2">$100</div>
+          <h3 class="font-bold text-stone-900 text-lg mb-3">Guardian</h3>
+          <ul class="text-stone-600 text-sm space-y-2 mb-6 text-left">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              Funds 1 week of wildlife monitoring
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              Quarterly impact reports
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              Invitation to annual field tour
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              WWA sticker pack
+            </li>
+          </ul>
+          <a href="#donate-form" class="btn-donate w-full py-3">Give $100</a>
+        </div>
+
+        <div class="bg-earth-50 rounded-2xl border-2 border-forest-100 p-8 text-center hover:border-forest-300 transition-colors">
+          <div class="text-4xl font-display font-bold text-forest-700 mb-2">$500</div>
+          <h3 class="font-bold text-stone-900 text-lg mb-3">Steward</h3>
+          <ul class="text-stone-600 text-sm space-y-2 mb-6 text-left">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              Sponsors a Jr. Ranger class
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              Name on annual report
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              VIP gala tickets (2)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              Guided behind-the-scenes tour
+            </li>
+          </ul>
+          <a href="#donate-form" class="btn-primary w-full py-3">Give $500</a>
+        </div>
+      </div>
+
+      <!-- Custom Donation / Other Ways -->
+      <div class="bg-earth-50 rounded-2xl border border-stone-200 p-8 md:p-10 reveal" id="donate-form">
+        <h3 class="font-display text-2xl font-bold text-stone-900 mb-6 text-center">Ways to Donate</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h4 class="font-bold text-stone-800 mb-3 flex items-center gap-2">
+              <svg class="w-5 h-5 text-forest-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
+              </svg>
+              Online
+            </h4>
+            <p class="text-stone-600 text-sm mb-4">
+              Secure online donations are processed through our payment partner. Click any amount above or use a custom amount.
+            </p>
+            <p class="text-stone-500 text-xs italic">
+              (Payment integration placeholder -- connect your preferred payment processor such as Stripe, PayPal, or Donorbox)
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-800 mb-3 flex items-center gap-2">
+              <svg class="w-5 h-5 text-forest-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+              By Mail
+            </h4>
+            <p class="text-stone-600 text-sm mb-3">
+              Send a check payable to:
+            </p>
+            <div class="bg-white rounded-lg border border-stone-200 p-4 text-sm text-stone-700">
+              <p class="font-semibold">Wasatch Wildlife Alliance</p>
+              <p>412 Cottonwood Lane, Suite 100</p>
+              <p>Salt Lake City, UT 84102</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-stone-200 mt-8 pt-8">
+          <h4 class="font-bold text-stone-800 mb-3">Other Ways to Give</h4>
+          <div class="grid sm:grid-cols-3 gap-4 text-sm text-stone-600">
+            <div class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              <span><strong>Monthly Giving:</strong> Set up a recurring donation for sustained impact.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              <span><strong>Corporate Match:</strong> Many employers match charitable gifts. Check with your HR department.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              <span><strong>Planned Giving:</strong> Include WWA in your estate plan. Contact us for details.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparency -->
+  <section class="py-16 md:py-20 bg-earth-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="section-label text-forest-600 justify-center mb-4">Accountability</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-stone-900">Where Your Money Goes</h2>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        <div class="space-y-4 reveal">
+          <div class="flex items-center gap-4">
+            <div class="w-full bg-stone-200 rounded-full h-6 overflow-hidden flex-1">
+              <div class="bg-forest-600 h-6 rounded-full flex items-center justify-end pr-3" style="width: 72%">
+                <span class="text-white text-xs font-bold">72%</span>
+              </div>
+            </div>
+            <span class="text-sm font-semibold text-stone-700 w-44 text-right">Conservation Programs</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-full bg-stone-200 rounded-full h-6 overflow-hidden flex-1">
+              <div class="bg-forest-500 h-6 rounded-full flex items-center justify-end pr-3" style="width: 20%">
+                <span class="text-white text-xs font-bold">20%</span>
+              </div>
+            </div>
+            <span class="text-sm font-semibold text-stone-700 w-44 text-right">Education & Outreach</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-full bg-stone-200 rounded-full h-6 overflow-hidden flex-1">
+              <div class="bg-amber-500 h-6 rounded-full flex items-center justify-end pr-3" style="width: 8%">
+                <span class="text-stone-900 text-xs font-bold">8%</span>
+              </div>
+            </div>
+            <span class="text-sm font-semibold text-stone-700 w-44 text-right">Administration</span>
+          </div>
+        </div>
+        <p class="text-stone-500 text-sm text-center mt-6">
+          Wasatch Wildlife Alliance is a registered 501(c)(3) nonprofit. All donations are tax-deductible to the extent allowed by law. EIN: 87-1234567
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="h-16 lg:hidden"></div>
+</BaseLayout>
